@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.5)
 
-project(lcms)
+project(lcms22)
 
 set(SRCS
 "src/cmstypes.c"
@@ -38,17 +38,13 @@ set(CMAKE_DEBUG_POSTFIX d)
 add_definitions(-DUNICODE -D_UNICODE)
 add_definitions(-DCMS_DLL_BUILD)
 
-if(BUILD_SHARED_LIBS)
-    add_definitions(-DCMS_DLL_BUILD)
-endif()
-
 string(REPLACE "/utf-8" "" CMAKE_C_FLAGS "${CMAKE_C_FLAGS}")
 
 include_directories(
 "./include"
 )
 
-add_library(lcms2 ${SRCS})
+add_library(lcms2 SHARED ${SRCS})
 
 if(NOT SKIP_INSTALL_HEADERS )
 
