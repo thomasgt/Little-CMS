@@ -7,7 +7,6 @@ set(SRCS
 "src/cmsvirt.c"
 "src/cmswtpnt.c"
 "src/cmsxform.c"
-"src/lcms2.def"
 "src/lcms2_internal.h"
 "src/cmsalpha.c"
 "src/cmscam02.c"
